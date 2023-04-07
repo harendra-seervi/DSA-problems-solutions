@@ -1,0 +1,1 @@
+{"name":"Local: Balance parenthesis","url":"d:\\Programming\\C++ programming\\Balance parenthesis.cpp","tests":[{"id":1639416823145,"input":"(())}","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Programming\\C++ programming\\Balance parenthesis.cpp","group":"local","local":true}

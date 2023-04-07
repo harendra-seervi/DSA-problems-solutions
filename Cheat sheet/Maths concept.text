@@ -1,0 +1,23 @@
+--------------------------------------------KNIGHT PROBLEM(CSES) ----------------------------------------------------
+
+Q. Total number of ways of putting 2 knights into chessboard such that no one attact each other
+
+Sol.       number of spaces  = (n^2)(n^2-1)/2;
+           number of ways to attact each other = 4(n-1)(n-2);
+           
+           if we subtract both then we will get number of ways to put 2 knights such that no one attact each other
+
+-------------------------------------------DIVIDE INTO 2 EQUAL SUM SETS---------------------------------------------
+
+Q. Divide the number form 1 to n into two sets such that sum in two sets equal
+
+Sol.  if(sumall%2==0){
+      	if(n%4==0){
+	  1,2,3,4   -> n/4 first , n/4 last ek set me or beach wale dusre set me
+	}
+	else{
+	  1,2,3,4,5,6,7 -> {7},{6,1},{5,2},{3,4} 
+	}
+      }
+
+

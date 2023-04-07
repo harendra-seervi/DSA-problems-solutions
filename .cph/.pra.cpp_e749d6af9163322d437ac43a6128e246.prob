@@ -1,0 +1,1 @@
+{"name":"Local: pra","url":"d:\\Programming\\C++ Programming\\pra.cpp","tests":[{"id":1650557793690,"input":"4\n6\nab\ncb\ndb\naa\ncc\nef\n7\naa\nbb\ncc\nac\nca\nbb\naa\n4\nkk\nkk\nab\nab\n5\njf\njf\njk\njk\njk","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Programming\\C++ Programming\\pra.cpp","group":"local","local":true}

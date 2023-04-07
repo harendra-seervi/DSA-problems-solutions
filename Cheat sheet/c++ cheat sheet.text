@@ -1,0 +1,86 @@
+**********************************************************SET FIXED VALUE OUTPUT IN DOUBLE/FLOAT****************************************************
+
+cout<<fixed<<setprecision(10)<<(floatvariable)<<endl;
+
+
+**********************************************************************SET functions*****************************************************************
+
+    set<int>st;
+    set<int,greater<int>>st2;
+    st.insert(1);
+    st.insert(5);
+    st.insert(7);
+    st.insert(8);
+    st.insert(14);
+
+    //lower bound -> present hoga to wahi return otherwise usske upper wala
+    //upper bound -> hamesha usske upper wala
+    cout<<*(st.lower_bound(6))<<endl;
+    cout<<*(st.upper_bound(7))<<endl; // pointer lagane ki avasakta nahi hii because single value
+
+    if(st.upper_bound(16)==st.end()){
+        cout<<"Nahi mila"<<endl;
+    }
+
+    cout<<*(st.begin())<<endl;
+
+
+**********************************************************************MAP functions*****************************************************************
+
+    map<int,int>mp;
+    mp.insert({1,2});
+    mp.insert({4,6});
+    mp.insert({7,9});
+    mp.insert({2,9});
+
+    cout<<mp.lower_bound(2)->first<<endl;
+    cout<<mp.begin()->first<<endl;
+
+    if(mp.upper_bound(12)==mp.end()){
+        cout<<"Nahi mila"<<endl;
+    }
+    for(auto val:mp){
+        cout<<val.first<<" "<<val.second<<endl;
+    }
+
+
+**********************************************************************Unordered MAP functions*****************************************************************
+    
+    // lower upper bound use nahi lee sakte hi issme hum
+    // issme  hi bas sorted nahi rehete hii elements
+    unordered_map<int,int>mp;
+    mp.insert({1,2});
+    mp.insert({4,6});
+    mp.insert({7,9});
+    mp.insert({2,9});
+    auto itr=mp.find(22);
+    if(itr==mp.end()){
+        cout<<"Nahi Mila"<<endl;
+    }
+    for(auto val:mp){
+        cout<<val.first<<" "<<val.second<<endl;
+    }
+
+**********************************************************************Multi MAP functions*****************************************************************
+
+    // multimap me first elements sorted order me store honge but second wale hamesha insert kiss order me kiye uspe depend karta hii
+    multimap<int,int>mp;
+    mp.insert({1,2});
+    mp.insert({1,6});
+    mp.insert({1,1});
+    mp.insert({7,9});
+    mp.insert({2,9});
+
+    auto itr=mp.find(22);
+    if(itr==mp.end()){
+        cout<<"Nahi Mila"<<endl;
+    }
+
+    cout<<mp.lower_bound(1)->second<<endl;
+
+    for(auto val:mp){
+        cout<<val.first<<" "<<val.second<<endl; 
+    }
+
+    mp.erase(mp.find(1)); -> asse erase karne se bass first element erase hoo jayega map me see
+    mp.erase(1); -> assa karne se sarre 1 delete hoo jayenge map me see
